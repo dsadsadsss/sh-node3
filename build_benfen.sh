@@ -344,10 +344,10 @@ main() {
             keep_processes_alive
         else
           if [ -z "$TOK" ]; then
-                if [ ! -s "/tmp/argo.log" ]; then
-                   check_and_start_process "cff.js" "chmod 777 ${FLIE_PATH}cff.js && nohup ${FLIE_PATH}cff.js tunnel --url http://localhost:8002 --no-autoupdate > /tmp/argo.log 2>&1 &"
-                   sleep 10 
-                   upload_subscription    
+                if [ ! -s "/tmp/ago.log" ]; then
+                     check_and_start_process "$cff_file" "chmod 777 ${FLIE_PATH}${cff_file} && nohup ${FLIE_PATH}${cff_file} tunnel --url http://localhost:${VL_PORT} --no-autoupdate > /tmp/ago.log 2>&1 &"
+                     sleep 10 
+                     upload_subscription      
                fi
           fi
         fi
