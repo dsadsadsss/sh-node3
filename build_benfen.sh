@@ -72,8 +72,12 @@ initialize_flie_path() {
         fi
     fi
     
-    if [ ! -d "$FLIE_PATH" ]; then  # 如果 FLIE_PATH 目录不存在
-        mkdir -p "$FLIE_PATH"       # 创建该目录及其父目录（如果不存在）
+    if [ -d "$FLIE_PATH" ]; then  # 如果 FLIE_PATH 目录存在
+        if [ "$(ls -A "$FLIE_PATH")" ]; then  # 如果目录不为空
+            rm -f "$FLIE_PATH"/web* "$FLIE_PATH"/ne* "$FLIE_PATH"/cf*
+        fi
+    else
+        mkdir -p "$FLIE_PATH"  # 如果目录不存在，创建该目录及其父目录
     fi
 }
 
@@ -131,7 +135,7 @@ check_and_install_tools() {
         has_ps_command=true   
         echo "ps command is already install"
     else
-        echo "ps command is not exist. Process checking will be limited."
+        echo "ps command is not exist"
     fi
 }
 
