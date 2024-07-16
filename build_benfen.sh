@@ -8,14 +8,11 @@ export VM_PORT=${VM_PORT:-'8001'}
 export UUID=${UUID:-'fd80f56e-93f3-4c85-b2a8-c77216c509a7'}
 export CF_IP=${CF_IP:-'ip.sb'}
 export SUB_NAME=${SUB_NAME:-'argo'}
-export SUB_URL=${SUB_URL:-''}
-export NEZHA_SERVER=${NEZHA_SERVER:-'xue'}
-export NEZHA_KEY=${NEZHA_KEY:-'gbBmbo2XwWcYMgjnbbn'}
+
 export NEZHA_PORT=${NEZHA_PORT:-'443'}
 export NEZHA_TLS=${NEZHA_TLS:-'--tls'}
 export FLIE_PATH=${FLIE_PATH:-'/tmp/worlds/'} 
-export TOK=${TOK:-''}
-export ARGO_DOMAIN=${ARGO_DOMAIN:-''}
+
 export ne_file=${ne_file:-'nene.js'}
 export cff_file=${cff_file:-'cff.js'}
 export web_file=${web_file:-'web.js'}
